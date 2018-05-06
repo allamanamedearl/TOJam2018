@@ -11,8 +11,7 @@ public class EnemyControls : MonoBehaviour {
 
     private string currButton;
     private string prevButtonTap;
-    private Time lastTapTimeStamp;
-    private float timeElapsed;
+
     private int timesTapped;
     private const float TIME_BETWEEN_TAPS = 0.5f;
 
@@ -27,7 +26,6 @@ public class EnemyControls : MonoBehaviour {
         Debug.Assert(Watercooler != null);
         Debug.Assert(Lamp != null);
 
-        timeElapsed = 0.0f;
         routineTriggered = false;
         timesTapped = 0;
         currButton = "";

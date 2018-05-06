@@ -60,12 +60,11 @@ public class PlayerMovement : MonoBehaviour {
             }
             
         }
-        
-        
-        transform.position+=(direction * Speed * Time.deltaTime);
-        
+               
+        transform.position+=(direction * Speed * Time.deltaTime);        
         
     }
+
     private void ChangeAnimState(int state)
     {
         if (currentAnimState == state)
@@ -78,17 +77,7 @@ public class PlayerMovement : MonoBehaviour {
             currentAnimState = state;
             Debug.Log("State is " + state);
         }
-        //switch(state)
-        //{
-        //    case STATE_IDLE:
-        //        break;
-        //    case STATE_RUN:
-        //        break;
-        //    case STATE_JUMP:
-        //        break;
-        //    case STATE_DEATH:
-        //        break;
-        //}
+
     }
 
     private void ChangeDirection(string direction)
@@ -106,8 +95,9 @@ public class PlayerMovement : MonoBehaviour {
         currDirection = direction;
     }
 
-    public void OnCollisionEnter2D(Collision2D c)
+    public void StopJumping()
     {
+<<<<<<< HEAD
        
        
         if((c.gameObject.tag == "Platform" || c.gameObject.name == "Colliders") && isJumping)
@@ -115,5 +105,16 @@ public class PlayerMovement : MonoBehaviour {
         {
             isJumping = false;
         }
+=======
+        isJumping = false;
+>>>>>>> 0941ad7e8eedbda52af8e3c2991b0dd5ea6a2fc0
     }
+    //public void OnCollisionEnter2D(Collision2D c)
+    //{
+
+    //    if((c.gameObject.tag == "Platform" || c.gameObject.name == "Colliders") && isJumping)
+    //    {
+    //        isJumping = false;
+    //    }
+    //}
 }

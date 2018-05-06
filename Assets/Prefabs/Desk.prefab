@@ -22,9 +22,11 @@ GameObject:
   - component: {fileID: 212261572955136400}
   - component: {fileID: 95764573989303794}
   - component: {fileID: 114489476407933124}
+  - component: {fileID: 61014339662446922}
+  - component: {fileID: 114037483073652106}
   m_Layer: 0
   m_Name: Desk
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,12 +38,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1174477862754484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.45, y: -4.24, z: 0}
+  m_LocalPosition: {x: -3.48, y: -4.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61014339662446922
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174477862754484}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.05}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.875, y: 0.609375}
+    newSize: {x: 0.875, y: 0.609375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.875, y: 0.49}
+  m_EdgeRadius: 0
 --- !u!95 &95764573989303794
 Animator:
   serializedVersion: 3
@@ -59,6 +86,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114037483073652106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174477862754484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f719677ad00c78458e1507e9f3d1f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114489476407933124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,6 +108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3422341ec96787d4cb7a2aa6b608d304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResetTrapTime: 0
+  CurrTrap: 1
+  TvFallSpeed: 0
+  LampColliders: []
+  DeskColliders:
+  - {fileID: 61247678384715422, guid: 8265f344d9b57684fb55b3c7380e1a9f, type: 2}
+  - {fileID: 61002459003814872, guid: a23f77a2b996b6d48aa81ee1d744abd2, type: 2}
 --- !u!212 &212261572955136400
 SpriteRenderer:
   m_ObjectHideFlags: 1
