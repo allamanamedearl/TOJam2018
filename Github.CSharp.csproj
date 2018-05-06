@@ -282,8 +282,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AnimationEvents.cs" />
     <Compile Include="Assets\Scripts\EnemyControls.cs" />
+    <Compile Include="Assets\Scripts\GroundedCheck.cs" />
+    <Compile Include="Assets\Scripts\IntroText.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Trap.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

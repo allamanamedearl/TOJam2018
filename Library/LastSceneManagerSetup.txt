@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/CreditsScreen.unity
-=======
-- path: Assets/Scenes/Test.unity
->>>>>>> 0941ad7e8eedbda52af8e3c2991b0dd5ea6a2fc0
+- path: Assets/Scenes/TitleScreen.unity
   isLoaded: 1
   isActive: 1
