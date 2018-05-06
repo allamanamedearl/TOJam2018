@@ -122,6 +122,8 @@ public class Trap : MonoBehaviour {
             //player dead
             Debug.Log("Player dead");
             //inform player of death
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<PlayerMovement>().KillPlayer();
         }
 
         StartCoroutine("ResetTrap");

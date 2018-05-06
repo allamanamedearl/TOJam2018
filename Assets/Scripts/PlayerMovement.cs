@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     public float Speed;
     public float JumpSpeed;
     private bool isJumping;
-
+    private bool isAlive;
     //Animation stuff
     const int STATE_IDLE = 0;
     const int STATE_RUN = 1;
@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Start ()
     {
         isJumping = false;
+        isAlive = true;
         currentAnimState = STATE_IDLE;
         currDirection = "left";
 	}
@@ -28,6 +29,8 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (!isAlive)
+            return;
         Vector3 direction = new Vector3(0, 0, 0);
         direction.x = Input.GetAxis("Horizontal");
 
@@ -100,12 +103,11 @@ public class PlayerMovement : MonoBehaviour {
 
         isJumping = false;
     }
-    //public void OnCollisionEnter2D(Collision2D c)
-    //{
-
-    //    if((c.gameObject.tag == "Platform" || c.gameObject.name == "Colliders") && isJumping)
-    //    {
-    //        isJumping = false;
-    //    }
-    //}
+    
+    public void KillPlayer()
+    {
+        ChangeAnimState(STATE_DEATH);
+        //trigger popup
+        isAlive = false;
+    }
 }

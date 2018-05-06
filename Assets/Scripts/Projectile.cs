@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour {
     public float Speed;
 	// Use this for initialization
 	void Start () {
+        Destroy(gameObject, 5.0f);
 		
 	}
 	
@@ -22,7 +23,8 @@ public class Projectile : MonoBehaviour {
         {
             if(cTag == "Player")
             {
-                //tell player he's dead
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                player.GetComponent<PlayerMovement>().KillPlayer();
             }
             Destroy(gameObject);
         }
