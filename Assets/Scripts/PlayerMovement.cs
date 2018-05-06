@@ -100,7 +100,17 @@ public class PlayerMovement : MonoBehaviour {
 
     public void StopJumping()
     {
+<<<<<<< HEAD
+       
+       
+        if((c.gameObject.tag == "Platform" || c.gameObject.name == "Colliders") && isJumping)
+
+        {
+            isJumping = false;
+        }
+=======
         isJumping = false;
+>>>>>>> 0941ad7e8eedbda52af8e3c2991b0dd5ea6a2fc0
     }
     
     public void KillPlayer()
