@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour {
     public void OnCollisionEnter2D(Collision2D c)
     {
        
-        if((c.gameObject.tag == "Platform" || c.gameObject.name == "TilemapLayer0") && isJumping)
+        if((c.gameObject.tag == "Platform" || c.gameObject.name == "Colliders") && isJumping)
         {
             isJumping = false;
         }
