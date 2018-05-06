@@ -108,13 +108,10 @@ public class PlayerMovement : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D c)
     {
-<<<<<<< HEAD
-       //TODO: needs to be when feet collide
-        if((c.gameObject.tag == "Platform" || c.gameObject.name == "TilemapLayer0") && isJumping)
-=======
+       
        
         if((c.gameObject.tag == "Platform" || c.gameObject.name == "Colliders") && isJumping)
->>>>>>> 72151c908a04be9c53c28625076820db28ea9305
+
         {
             isJumping = false;
         }
