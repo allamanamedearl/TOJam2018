@@ -60,12 +60,11 @@ public class PlayerMovement : MonoBehaviour {
             }
             
         }
-        
-        
-        transform.position+=(direction * Speed * Time.deltaTime);
-        
+               
+        transform.position+=(direction * Speed * Time.deltaTime);        
         
     }
+
     private void ChangeAnimState(int state)
     {
         if (currentAnimState == state)
@@ -78,17 +77,7 @@ public class PlayerMovement : MonoBehaviour {
             currentAnimState = state;
             Debug.Log("State is " + state);
         }
-        //switch(state)
-        //{
-        //    case STATE_IDLE:
-        //        break;
-        //    case STATE_RUN:
-        //        break;
-        //    case STATE_JUMP:
-        //        break;
-        //    case STATE_DEATH:
-        //        break;
-        //}
+
     }
 
     private void ChangeDirection(string direction)
@@ -106,17 +95,16 @@ public class PlayerMovement : MonoBehaviour {
         currDirection = direction;
     }
 
-    public void OnCollisionEnter2D(Collision2D c)
+    public void StopJumping()
     {
-<<<<<<< HEAD
-       //TODO: needs to be when feet collide
-        if((c.gameObject.tag == "Platform" || c.gameObject.name == "TilemapLayer0") && isJumping)
-=======
-       
-        if((c.gameObject.tag == "Platform" || c.gameObject.name == "Colliders") && isJumping)
->>>>>>> 72151c908a04be9c53c28625076820db28ea9305
-        {
-            isJumping = false;
-        }
+        isJumping = false;
     }
+    //public void OnCollisionEnter2D(Collision2D c)
+    //{
+
+    //    if((c.gameObject.tag == "Platform" || c.gameObject.name == "Colliders") && isJumping)
+    //    {
+    //        isJumping = false;
+    //    }
+    //}
 }

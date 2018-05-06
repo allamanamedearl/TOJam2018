@@ -22,9 +22,11 @@ GameObject:
   - component: {fileID: 212703973570739272}
   - component: {fileID: 95658032001100588}
   - component: {fileID: 114343001289337398}
+  - component: {fileID: 60044026730060680}
+  - component: {fileID: 114294220553478630}
   m_Layer: 0
   m_Name: Lamp
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,12 +38,43 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342461955619428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.7, z: 0}
+  m_LocalPosition: {x: 0.49, y: -4.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60044026730060680
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342461955619428}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5625, y: 1}
+    newSize: {x: 1.5625, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.15625, y: 0.5}
+      - {x: -0.15625, y: 0.4375}
+      - {x: -0.015625, y: 0.28125}
+      - {x: 0.21875, y: 0.15625}
+      - {x: 0.65625, y: 0.15625}
+      - {x: 0.65625, y: 0.328125}
+      - {x: 0.59375, y: 0.5}
 --- !u!95 &95658032001100588
 Animator:
   serializedVersion: 3
@@ -59,6 +92,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114294220553478630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342461955619428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f719677ad00c78458e1507e9f3d1f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114343001289337398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,6 +114,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3422341ec96787d4cb7a2aa6b608d304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResetTrapTime: 2
+  CurrTrap: 2
+  TvFallSpeed: 0
+  LampColliders:
+  - {fileID: 60560245199288144, guid: e1ef5ae2a8a2b98428fee305ce12af5d, type: 2}
+  - {fileID: 60046431784722406, guid: a36aaa89cc21ca64f85de103494c6114, type: 2}
+  - {fileID: 60646806538686834, guid: d970da07ca1373d4f98fe2767110f69c, type: 2}
+  - {fileID: 60028005621894966, guid: 112fb44657c36534dbc72f05c1c8961b, type: 2}
+  - {fileID: 60352803637613038, guid: 689a54955cdb7ab4795c632d8608dfd0, type: 2}
+  DeskColliders: []
 --- !u!212 &212703973570739272
 SpriteRenderer:
   m_ObjectHideFlags: 1
